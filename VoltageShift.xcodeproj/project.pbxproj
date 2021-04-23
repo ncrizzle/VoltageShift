@@ -16,6 +16,23 @@
 		ABC74F0817983B9900B182E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = ABC74F0617983B9900B182E7 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D93E70412633365E00EBB86B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC74EF317983B9900B182E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AB1B031317E25FC000DD337E;
+			remoteInfo = voltageshift;
+		};
+		D93E70432633366D00EBB86B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABC74EF317983B9900B182E7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABC74EFD17983B9900B182E7;
+			remoteInfo = VoltageShift;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		AB1B031217E25FC000DD337E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -44,6 +61,7 @@
 		ABC74F2B1798553700B182E7 /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		ABC74F3517985FC900B182E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		ABC74F3717985FCE00B182E7 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		D93E70452633368400EBB86B /* VoltageShift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VoltageShift.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +97,7 @@
 		ABC74EF117983B9900B182E7 = {
 			isa = PBXGroup;
 			children = (
+				D93E70452633368400EBB86B /* VoltageShift.xcodeproj */,
 				6161C7612567D08000238E5B /* voltageshfit_1.25.zip */,
 				619B28DB25653ADA001E0668 /* voltageshift_1.24.zip */,
 				61C882121EFAFA77001DE175 /* README.md */,
@@ -145,6 +164,11 @@
 			path = VoltageShiftAnVMSR;
 			sourceTree = "<group>";
 		};
+		D93E70462633368400EBB86B /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -170,6 +194,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D93E70442633366D00EBB86B /* PBXTargetDependency */,
 			);
 			name = voltageshift;
 			productName = anvmsr;
@@ -189,6 +214,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				D93E70422633365E00EBB86B /* PBXTargetDependency */,
 			);
 			name = VoltageShift;
 			productName = AnVMSR;
@@ -224,6 +250,12 @@
 			mainGroup = ABC74EF117983B9900B182E7;
 			productRefGroup = ABC74EFF17983B9900B182E7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D93E70462633368400EBB86B /* Products */;
+					ProjectRef = D93E70452633368400EBB86B /* VoltageShift.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				ABC74EFD17983B9900B182E7 /* VoltageShift */,
@@ -273,6 +305,19 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		D93E70422633365E00EBB86B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AB1B031317E25FC000DD337E /* voltageshift */;
+			targetProxy = D93E70412633365E00EBB86B /* PBXContainerItemProxy */;
+		};
+		D93E70442633366D00EBB86B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABC74EFD17983B9900B182E7 /* VoltageShift */;
+			targetProxy = D93E70432633366D00EBB86B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		ABC74F0617983B9900B182E7 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -296,6 +341,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoltageShiftAnVMSR/voltageshift-Prefix.pch";
 				GCC_VERSION = "";
+				INFOPLIST_FILE = "$(SRCROOT)/VoltageShiftAnVMSR/VoltageShift-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -313,6 +359,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "VoltageShiftAnVMSR/voltageshift-Prefix.pch";
 				GCC_VERSION = "";
+				INFOPLIST_FILE = "$(SRCROOT)/VoltageShiftAnVMSR/VoltageShift-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
